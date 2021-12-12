@@ -134,7 +134,7 @@ public class GraphFragment extends Fragment {
         graph.addSeries(series);
         series.setDataWidth(0.5);
         graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
-        graph.getViewport().setMinX(1);
+        graph.getViewport().setMinX(0);
         graph.getViewport().setMaxX(7);
         graph.getViewport().setMinY(0);
         graph.getViewport().setMaxY(10000);
