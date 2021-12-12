@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateFood">
+
+    <EditText
+        android:id="@+id/nameEn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:minHeight="48dp"
+        android:hint="Enter Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/calEn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        android:hint="Enter Calories"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEn" />
+
+    <EditText
+        android:id="@+id/serveEn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        android:hint="Enter Serving Size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calEn" />
+
+    <Spinner
+        android:id="@+id/cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        android:hint="category"
+        android:contentDescription="category"
+        app:layout_constraintTop_toBottomOf="@id/serveEn" />
+
+    <NumberPicker
+        android:id="@+id/prc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/pr"
+        app:layout_constraintTop_toBottomOf="@+id/cat" />
+
+    <NumberPicker
+        android:id="@+id/ncc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cat"
+        app:layout_constraintLeft_toRightOf="@id/nc"
+        />
+    <NumberPicker
+        android:id="@+id/ftc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cat"
+        app:layout_constraintLeft_toRightOf="@id/ft"
+        />
+
+    <TextView
+        android:id="@+id/pr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="92dp"
+        android:text="Protien%"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cat" />
+
+    <TextView
+        android:id="@+id/nc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Net Carb%"
+        app:layout_constraintLeft_toRightOf="@id/prc"
+        app:layout_constraintTop_toBottomOf="@+id/cat" />
+
+    <TextView
+        android:id="@+id/ft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Fat%"
+        app:layout_constraintLeft_toRightOf="@id/ncc"
+        app:layout_constraintTop_toBottomOf="@+id/cat" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:onClick="create_back"
+        android:backgroundTint="#4CAF50"
+        app:layout_constraintTop_toBottomOf="@id/ftc"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create From online"
+        android:onClick="create_back3"
+        android:backgroundTint="#4CAF50"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

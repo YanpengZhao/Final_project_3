@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item
+        android:id="@+id/food"
+        android:title="Food"
+        android:icon="@drawable/ic_baseline_food_bank_24"/>
+    <item
+        android:id="@+id/add"
+        android:title="Add"
+        android:icon="@drawable/ic_baseline_add_24"/>
+    <item
+        android:id="@+id/graph"
+        android:title="Graph"
+        android:icon="@drawable/ic_baseline_bar_chart_24"/>
+    <item
+        android:id="@+id/friend"
+        android:title="Pedometer"
+        android:icon="@drawable/ic_baseline_directions_walk_24"/>
+
+
+
+</menu>
