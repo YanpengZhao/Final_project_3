@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -42,6 +43,7 @@ public class HomeFragment extends Fragment {
         ListView listView1 = (ListView) rootView.findViewById(R.id.exelist);
         Button button1 = (Button) rootView.findViewById(R.id.button8);
         Button button2 = (Button) rootView.findViewById(R.id.button9);
+        LinearLayout linearLayout = (LinearLayout) rootView.findViewById(R.id.info);
         DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
         String date = dateFormat.format(new Date());
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("com.example.final_project", Context.MODE_PRIVATE);
@@ -124,6 +126,7 @@ public class HomeFragment extends Fragment {
                 listView.setVisibility(View.INVISIBLE);
                 listView1.setVisibility(View.INVISIBLE);
                 textView4.setVisibility(View.INVISIBLE);
+                linearLayout.setVisibility(View.INVISIBLE);
                 textView1.setText("Looks like you haven't added any food or exercise today!");
 
             }
@@ -133,6 +136,7 @@ public class HomeFragment extends Fragment {
             listView.setVisibility(View.INVISIBLE);
             listView1.setVisibility(View.INVISIBLE);
             textView4.setVisibility(View.INVISIBLE);
+            linearLayout.setVisibility(View.INVISIBLE);
             textView1.setText("Looks like it's the first time you use the app, \ntry to add some food or exercise!");
         }
         return rootView;

@@ -22,7 +22,7 @@ public class settingPrivate extends AppCompatActivity {
         String account = sharePreferences.getString("username","");
         String email = sharePreferences.getString("email","");
         ArrayList<String> settingList = new ArrayList<>();
-        settingList.add("Account                                                    "+account);
+        settingList.add("Account                                             "+account);
         settingList.add("Email                                                 "+email);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, settingList);

@@ -44,6 +44,7 @@ public class SignUp2 extends AppCompatActivity {
         String str=sharePreferences.getString(MainActivity.usernameKey,"");
         String username=str;
         sharePreferences.edit().remove("date").apply();
+        sharePreferences.edit().remove("date1").apply();
         sharePreferences.edit().putString("age",age1).apply();
         sharePreferences.edit().putString("sex",sex1).apply();
         sharePreferences.edit().putString("weight",weight1).apply();
