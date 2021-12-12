@@ -6,14 +6,37 @@
         <entry key="..\:/Users/jiang/AndroidStudioProjects/Final_project_2/app/src/main/res/layout/activity_sign_up2.xml" value="0.2898550724637681" />
         <entry key="..\:/Users/jiang/AndroidStudioProjects/Final_project_2/app/src/main/res/layout/fragment_graph.xml" value="0.296195652173913" />
         <entry key="..\:/Users/jiang/AndroidStudioProjects/Final_project_2/app/src/main/res/layout/fragment_home.xml" value="0.2898550724637681" />
+        <entry key="app/src/main/res/layout/activity_add_exe2.xml" value="0.13802083333333334" />
         <entry key="app/src/main/res/layout/activity_add_food2.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_add_plan.xml" value="0.13802083333333334" />
         <entry key="app/src/main/res/layout/activity_create_exe.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_main11.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_main12.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_main9.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_setting_feedback.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_setting_notification.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_setting_private.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_setting_profile.xml" value="0.13802083333333334" />
         <entry key="app/src/main/res/layout/activity_sign_up2.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_suggest.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/add_exercise.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/add_food.xml" value="0.13802083333333334" />
         <entry key="app/src/main/res/layout/create_food.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/food_cal.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.13802083333333334" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.13802083333333334" />
         <entry key="app/src/main/res/layout/fragment_friend.xml" value="0.14628623188405798" />
         <entry key="app/src/main/res/layout/fragment_graph.xml" value="0.14628623188405798" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_progress.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_timeline.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/list_view_items.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/list_view_items2.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/menu/menu2.xml" value="0.13802083333333334" />
       </map>
     </option>
   </component>

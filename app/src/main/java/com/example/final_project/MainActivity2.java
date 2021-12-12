@@ -152,6 +152,7 @@ public class MainActivity2 extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         SharedPreferences sharedPreferences = getSharedPreferences("com.example.final_project", Context.MODE_PRIVATE);
         sharedPreferences.edit().remove("user").apply();
+        sharedPreferences.edit().remove("username").apply();
         startActivity(intent);
     }
 

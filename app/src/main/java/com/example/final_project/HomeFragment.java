@@ -51,6 +51,7 @@ public class HomeFragment extends Fragment {
         int day = Integer.parseInt(dateSplit[1]);
         int day1 = 0;
         int day2 = 0;
+        Log.d("username",sharedPreferences.getString("username",""));
         String name = sharedPreferences.getString("username","");
         String text = "it's "+dateSplit[0]+"/"+dateSplit[1]+", Welcome "+name+"!";
         textView.setText(text);

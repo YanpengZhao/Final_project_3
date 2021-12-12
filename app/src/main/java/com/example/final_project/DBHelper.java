@@ -156,7 +156,6 @@ public class DBHelper {
             c.moveToNext();
         }
         c.close();
-        sqLiteDatabase.close();
         return toreturn;
     }
     public void insertFood(String food,String category,String calory,String serving,String date,String username,String pr,String nc,String ft){

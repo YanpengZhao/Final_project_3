@@ -36,24 +36,15 @@ public class MainActivity extends AppCompatActivity {
         String str = myTextField.getText().toString();
         String pass = password.getText().toString();
         sharePreferences.edit().putString("user", str).apply();
-        if(!sharePreferences.contains("username")){
+        if(!sharePreferences.contains("user")){
             Context context = getApplicationContext();
             CharSequence text = "No account signed up yet";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }else {
-            String rightUsername = sharePreferences.getString("username", "");
-            String rightPassword = sharePreferences.getString("password", "");
-            if(str.equals(rightUsername) && pass.equals(rightPassword)){
-                goToActivity2();
-            }else{
-                Context context = getApplicationContext();
-                CharSequence text = "Incorrect username or password";
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-            }
+            sharePreferences.edit().putString("username", str).apply();
+            goToActivity2();
         }
     }
 
