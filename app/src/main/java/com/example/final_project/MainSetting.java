@@ -21,7 +21,6 @@ public class MainSetting extends AppCompatActivity {
         ArrayList<String> settingList = new ArrayList<>();
         settingList.add("Profile");
         settingList.add("Private");
-        settingList.add("Notification");
         settingList.add("Feedback");
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, settingList);
@@ -37,10 +36,6 @@ public class MainSetting extends AppCompatActivity {
                 }
                 else if(position == 1){
                     Intent intent = new Intent(getApplicationContext(), settingPrivate.class);
-                    startActivity(intent);
-                }
-                else if(position == 2){
-                    Intent intent = new Intent(getApplicationContext(), settingNotification.class);
                     startActivity(intent);
                 }
                 else{

@@ -22,16 +22,7 @@
             android:name=".create_exe"
             android:exported="true" />
         <activity
-            android:name=".MainActivity12"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity11"
-            android:exported="true" />
-        <activity
             android:name=".SignUp"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity9"
             android:exported="true" />
         <activity
             android:name=".add_plan"
@@ -62,9 +53,6 @@
             android:exported="true" />
         <activity
             android:name=".settingProfile"
-            android:exported="true" />
-        <activity
-            android:name=".settingNotification"
             android:exported="true" />
         <activity
             android:name=".settingPrivate"
