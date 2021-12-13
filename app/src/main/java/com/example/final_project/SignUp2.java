@@ -53,6 +53,7 @@ public class SignUp2 extends AppCompatActivity {
         Log.d("db",dbHelper.getFoodNames().size()+"");
         if (dbHelper.getFoodNames().size()==0) {
             sqLiteDatabase.execSQL("DROP TABLE IF EXISTS foodType");
+            Log.d("inside",dbHelper.getFoodNames().size()+"");
             String date = "******";
             int cn = 0;
             String line = "Food,Measure,Grams,Calories,Protein,Fat,Sat.Fat,Fiber,Carbs,Category\n" +

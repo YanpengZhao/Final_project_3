@@ -58,10 +58,30 @@ public class HomeFragment extends Fragment {
         Context context=this.getActivity().getApplicationContext();
         SQLiteDatabase sqLiteDatabase=context.openOrCreateDatabase("foodType",Context.MODE_PRIVATE,null);
         DBHelper dbHelper=new DBHelper(sqLiteDatabase);
-
-        if(sharedPreferences.contains("date") || sharedPreferences.contains("date1")) {
-            if(sharedPreferences.contains("date")) {
-                String date1 = sharedPreferences.getString("date", "");
+        boolean check_today_eat=false;
+        ArrayList<FoodType> foodL = new ArrayList<FoodType>();
+        foodL = dbHelper.getUserFood(name);
+        if(foodL.size()!=0){
+            for (FoodType foo : foodL){
+                if(!foo.getDate().equals("******") && foo.getDate().split("/")[1].equals(day+"")){
+                    check_today_eat=true;
+                    break;
+                }
+            }
+        }
+        ArrayList<ExeType> exeL=dbHelper.getUserExe(name);
+        boolean check_today_exe=false;
+        if(exeL.size()!=0){
+            for (ExeType foo : exeL){
+                if(!foo.getDate().equals("******") && foo.getDate().split("/")[1].equals(day+"")){
+                    check_today_exe=true;
+                    break;
+                }
+            }
+        }
+        if(check_today_eat || check_today_exe) {
+            if(check_today_eat) {
+                String date1 = date;
                 String[] dateSplit1 = date1.split("/");
                 day1 = Integer.parseInt(dateSplit1[1]);
                 if (day == day1) {
@@ -84,8 +104,8 @@ public class HomeFragment extends Fragment {
                     listView.setAdapter(new ArrayAdapter<String>(rootView.getContext(), android.R.layout.simple_list_item_1, displayNotes));
                 }
             }
-            if(sharedPreferences.contains("date1")) {
-                String date2 = sharedPreferences.getString("date1", "");
+            if(check_today_exe) {
+                String date2 = date;
                 String[] dateSplit2 = date2.split("/");
                 day2 = Integer.parseInt(dateSplit2[1]);
                 if (day == day2) {

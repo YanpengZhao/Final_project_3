@@ -44,7 +44,6 @@ public class DBHelper {
             c.moveToNext();
         }
         c.close();
-        sqLiteDatabase.close();
         return noteList;
     }
 
@@ -104,7 +103,6 @@ public class DBHelper {
             c.moveToNext();
         }
         c.close();
-        sqLiteDatabase.close();
         return toreturn;
     }
     public ArrayList<planType> getPlan(String username){
@@ -122,7 +120,6 @@ public class DBHelper {
             c.moveToNext();
         }
         c.close();
-        sqLiteDatabase.close();
         return toreturn;
     }
     public ArrayList<FoodType> getFoodNames(){
