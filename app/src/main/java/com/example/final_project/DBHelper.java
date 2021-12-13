@@ -21,6 +21,9 @@ public class DBHelper {
     public void createTable3(){
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS planType"+"(id INTEGER PRIMARY KEY, calory TEXT,username TEXT)");
     }
+    public void createTable4(){
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS passType"+"(id INTEGER PRIMARY KEY, password TEXT,username TEXT)");
+    }
     public ArrayList<ExeType>getUserExe(String username1){
         createTableE();
         Cursor c=sqLiteDatabase.rawQuery(String.format("SELECT * from exeType where username like '%s'",username1),null);
@@ -122,6 +125,23 @@ public class DBHelper {
         c.close();
         return toreturn;
     }
+    public ArrayList<PassType>getPass(String username){
+        createTable4();
+        ArrayList<PassType> toreturn=new ArrayList<>();
+        Cursor c=sqLiteDatabase.rawQuery(String.format("SELECT * from passType where username like '%s'",username),null);
+        int caloryIndex=c.getColumnIndex("password");
+        int usernameIndex=c.getColumnIndex("username");
+        c.moveToFirst();
+        while(!c.isAfterLast()){
+            String calory=c.getString(caloryIndex);
+            String username1=c.getString(usernameIndex);
+            PassType note=new PassType(calory,username1);
+            toreturn.add(note);
+            c.moveToNext();
+        }
+        c.close();
+        return toreturn;
+    }
     public ArrayList<FoodType> getFoodNames(){
         createTable();
         ArrayList<FoodType> toreturn=new ArrayList<>();
@@ -166,6 +186,10 @@ public class DBHelper {
     public void insertPlan(String calory,String username){
         createTable3();
         sqLiteDatabase.execSQL(String.format("INSERT INTO planType(calory,username) VALUES ('%s','%s')",calory,username));
+    }
+    public void insertPass(String password,String username){
+        createTable4();
+        sqLiteDatabase.execSQL(String.format("INSERT INTO passType(password,username) VALUES ('%s','%s')",password,username));
     }
 
 }

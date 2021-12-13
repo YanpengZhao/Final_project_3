@@ -410,6 +410,11 @@ public class SignUp2 extends AppCompatActivity {
         if(dbHelper.getExeNames().size()==0) {
             add_exedb();
         }
+        String account=getIntent().getStringExtra("account");
+        String password=getIntent().getStringExtra("pass");
+        Log.d("passwordbefore",password);
+        Log.d("accountbefore",account);
+        dbHelper.insertPass(password,account);
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }

@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,6 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,9 +39,20 @@ public class MainActivity extends AppCompatActivity {
         String str = myTextField.getText().toString();
         String pass = password.getText().toString();
         sharePreferences.edit().putString("user", str).apply();
-        if(!sharePreferences.contains("user")){
-            Context context = getApplicationContext();
-            CharSequence text = "No account signed up yet";
+        Context context=getApplicationContext();
+        SQLiteDatabase sqLiteDatabase=context.openOrCreateDatabase("foodType",Context.MODE_PRIVATE,null);
+        DBHelper dbHelper=new DBHelper(sqLiteDatabase);
+        ArrayList<PassType> passL=dbHelper.getPass(str);
+        boolean checkPass=false;
+        for(PassType ps:passL){
+            Log.d("pass",ps.getPassword());
+            Log.d("passE",pass);
+            if(ps.getPassword().equals(pass)){
+                checkPass=true;
+            }
+        }
+        if(!checkPass){
+            CharSequence text = "Password Error";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();

@@ -45,6 +45,8 @@ public class SignUp extends AppCompatActivity {
             sharePreferences.edit().putString("password", password1).apply();
             sharePreferences.edit().putString("email", email).apply();
             Intent intent = new Intent(getApplicationContext(), SignUp2.class);
+            intent.putExtra("account",account);
+            intent.putExtra("pass",password1);
             startActivity(intent);
         }else{
             Context context = getApplicationContext();
